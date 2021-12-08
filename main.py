@@ -7,10 +7,14 @@ DISNEY_LOGO = Image.open('publicis.png')
 YOUTUBE_LOGO = Image.open('youtube.jpg')
 DV360_LOGO = Image.open('DV360.png')
 TTD_LOGO = Image.open('TTD.png')
-AMAZON_LOGO = Image.open('amazon.jpg')
+AMAZON_LOGO = Image.open('amazon.png')
+FB_LOGO = Image.open('facebook.png')
+TWITTER_LOGO = Image.open('twitter.png')
+SNAPCHAT_LOGO = Image.open('snapchat.jpg')
+TIKTOK_LOGO = Image.open('tiktok.png')
+PINTEREST_LOGO = Image.open('pinterest.png')
 
-#PLATFORMS = ["YouTube", "DV360", "TTD", "Amazon", "Facebook", "Twitter", "Snapchat", "TikTok", "Pinterest"]
-PLATFORMS = ["YouTube", "DV360", "TTD", "Amazon"]
+PLATFORMS = ["YouTube", "DV360", "TTD", "Amazon", "Facebook", "Twitter", "Snapchat", "TikTok", "Pinterest"]
 DATA_25 = []
 DATA_50 = []
 DATA_75 = []
@@ -80,6 +84,66 @@ with body:
         AMAZON_100 = round(55.847*float(INPUT_BUDGET_BOX) + 53883)
         DATA_100.append(AMAZON_100)
         
+        FB_25 = round(32.939*float(INPUT_BUDGET_BOX) + 786172)
+        DATA_25.append(FB_25)
+        
+        FB_50 = round(19.305*float(INPUT_BUDGET_BOX) + 616300)
+        DATA_50.append(FB_50)
+        
+        FB_75 = round(14.323*float(INPUT_BUDGET_BOX) + 364221)
+        DATA_75.append(FB_75)
+        
+        FB_100 = round(9.8332*float(INPUT_BUDGET_BOX) + 185157)
+        DATA_100.append(FB_100)
+        
+        TW_25 = round(126.99*float(INPUT_BUDGET_BOX) + 540209)
+        DATA_25.append(TW_25)
+        
+        TW_50 = round(76.986*float(INPUT_BUDGET_BOX) + 306746)
+        DATA_50.append(TW_50)
+        
+        TW_75 = round(51.657*float(INPUT_BUDGET_BOX) + 206196)
+        DATA_75.append(TW_75)
+        
+        TW_100 = round(38.955*float(INPUT_BUDGET_BOX) + 169317)
+        DATA_100.append(TW_100)
+        
+        SNAP_25 = round(29.465*float(INPUT_BUDGET_BOX) + 323324)
+        DATA_25.append(SNAP_25)
+        
+        SNAP_50 = round(20.537*float(INPUT_BUDGET_BOX) + 106553)
+        DATA_50.append(SNAP_50)
+        
+        SNAP_75 = round(14.664*float(INPUT_BUDGET_BOX) + 29988)
+        DATA_75.append(SNAP_75)
+        
+        SNAP_100 = round(11.921*float(INPUT_BUDGET_BOX) + 4148)
+        DATA_100.append(SNAP_100)
+        
+        TIK_25 = round(76.274*float(INPUT_BUDGET_BOX) + 3389)
+        DATA_25.append(TIK_25)
+        
+        TIK_50 = round(34.316*float(INPUT_BUDGET_BOX) + 516)
+        DATA_50.append(TIK_50)
+        
+        TIK_75 = round(22.067*float(INPUT_BUDGET_BOX) + 664)
+        DATA_75.append(TIK_75)
+        
+        TIK_100 = round(11.074*float(INPUT_BUDGET_BOX) + 1047)
+        DATA_100.append(TIK_100)
+        
+        PINT_25 = round(85.577*float(INPUT_BUDGET_BOX) + 6865)
+        DATA_25.append(PINT_25)
+        
+        PINT_50 = round(40.716*float(INPUT_BUDGET_BOX) - 2520)
+        DATA_50.append(PINT_50)
+        
+        PINT_75 = round(25.119*float(INPUT_BUDGET_BOX) - 4519)
+        DATA_75.append(PINT_75)
+        
+        PINT_100 = round(16.764*float(INPUT_BUDGET_BOX) - 3367)
+        DATA_100.append(PINT_100)
+        
     elif INPUT_CALCULATION_METHOD == "Spend based on performance":
         INPUT_PERFORMANCE_BOX = st.text_input("Please enter your desired views:", "2000000")
         
@@ -146,6 +210,86 @@ with body:
         AMAZON_100 = round((float(INPUT_PERFORMANCE_BOX) - 53883)/55.847, 2)
         if (AMAZON_100 <0): AMAZON_100 = 0
         DATA_100.append(AMAZON_100)
+        
+        FB_25 = round((float(INPUT_PERFORMANCE_BOX) - 786172)/32.9392, 2)
+        if (FB_25 <0): FB_25 = 0
+        DATA_25.append(FB_25)
+        
+        FB_50 = round((float(INPUT_PERFORMANCE_BOX) - 616300)/19.305, 2)
+        if (FB_50 <0): FB_50 = 0
+        DATA_50.append(FB_50)
+        
+        FB_75 = round((float(INPUT_PERFORMANCE_BOX) - 364221)/14.323, 2)
+        if (FB_75 <0): FB_75 = 0
+        DATA_75.append(FB_75)
+        
+        FB_100 = round((float(INPUT_PERFORMANCE_BOX) - 185157)/9.8332, 2)
+        if (FB_100 <0): FB_100 = 0
+        DATA_100.append(FB_100)
+        
+        TW_25 = round((float(INPUT_PERFORMANCE_BOX) - 540209)/126.99, 2)
+        if (TW_25 <0): TW_25 = 0
+        DATA_25.append(TW_25)
+        
+        TW_50 = round((float(INPUT_PERFORMANCE_BOX) - 306746)/76.986, 2)
+        if (TW_50 <0): TW_50 = 0
+        DATA_50.append(TW_50)
+        
+        TW_75 = round((float(INPUT_PERFORMANCE_BOX) - 206196)/51.657, 2)
+        if (TW_75 <0): TW_75 = 0
+        DATA_75.append(TW_75)
+        
+        TW_100 = round((float(INPUT_PERFORMANCE_BOX) - 169317)/38.955, 2)
+        if (TW_100 <0): TW_100 = 0
+        DATA_100.append(TW_100)
+        
+        SNAP_25 = round((float(INPUT_PERFORMANCE_BOX) - 323324)/29.465, 2)
+        if (SNAP_25 <0): SNAP_25 = 0
+        DATA_25.append(SNAP_25)
+        
+        SNAP_50 = round((float(INPUT_PERFORMANCE_BOX) - 106553)/20.537, 2)
+        if (SNAP_50 <0): SNAP_50 = 0
+        DATA_50.append(SNAP_50)
+        
+        SNAP_75 = round((float(INPUT_PERFORMANCE_BOX) - 29988)/14.664, 2)
+        if (SNAP_75 <0): SNAP_75 = 0
+        DATA_75.append(SNAP_75)
+        
+        SNAP_100 = round((float(INPUT_PERFORMANCE_BOX) - 4148)/11.921, 2)
+        if (SNAP_100 <0): SNAP_100 = 0
+        DATA_100.append(SNAP_100)
+        
+        TIK_25 = round((float(INPUT_PERFORMANCE_BOX) - 3389)/76.274, 2)
+        if (TIK_25 <0): TIK_25 = 0
+        DATA_25.append(TIK_25)
+        
+        TIK_50 = round((float(INPUT_PERFORMANCE_BOX) - 516)/34.316, 2)
+        if (TIK_50 <0): TIK_50 = 0
+        DATA_50.append(TIK_50)
+        
+        TIK_75 = round((float(INPUT_PERFORMANCE_BOX) - 664)/22.067, 2)
+        if (TIK_75 <0): TIK_75 = 0
+        DATA_75.append(TIK_75)
+        
+        TIK_100 = round((float(INPUT_PERFORMANCE_BOX) - 1047)/11.074, 2)
+        if (TIK_100 <0): TIK_100 = 0
+        DATA_100.append(TIK_100)
+        
+        PINT_25 = round((float(INPUT_PERFORMANCE_BOX) - 6865)/85.577, 2)
+        if (PINT_25 <0): PINT_25 = 0
+        DATA_25.append(PINT_25)
+        
+        PINT_50 = round((float(INPUT_PERFORMANCE_BOX) + 2520)/40.716, 2)
+        if (PINT_50 <0): PINT_50 = 0
+        DATA_50.append(PINT_50)
+        
+        PINT_75 = round((float(INPUT_PERFORMANCE_BOX) + 4519)/25.119, 2)
+        if (PINT_75 <0): PINT_75 = 0
+        DATA_75.append(PINT_75)
+        
+        PINT_100 = round((float(INPUT_PERFORMANCE_BOX) + 3367)/16.764, 2)
+        if (PINT_100 <0): PINT_100 = 0
+        DATA_100.append(PINT_100)
     
     YT_CONTAINER = st.container()
     
@@ -184,11 +328,63 @@ with body:
 
     with AMAZON_CONTAINER:
         col1, col2, col3, col4, col5= st.columns(5)
+        col1.write("")
         col1.image(AMAZON_LOGO)
         col2.metric('25% Video Views', millify(AMAZON_25, precision=2))
         col3.metric('50% Video Views', millify(AMAZON_50, precision=2))
         col4.metric('75% Video Views', millify(AMAZON_75, precision=2))
         col5.metric('100% Video Views', millify(AMAZON_100, precision=2))
+        
+    FB_CONTAINER = st.container()
+
+    with FB_CONTAINER:
+        col1, col2, col3, col4, col5= st.columns(5)
+        col1.image(FB_LOGO)
+        col2.metric('25% Video Views', millify(FB_25, precision=2))
+        col3.metric('50% Video Views', millify(FB_50, precision=2))
+        col4.metric('75% Video Views', millify(FB_75, precision=2))
+        col5.metric('100% Video Views', millify(FB_100, precision=2))   
+        
+    TW_CONTAINER = st.container()
+
+    with TW_CONTAINER:
+        col1, col2, col3, col4, col5= st.columns(5)
+        col1.image(TWITTER_LOGO)
+        col2.metric('25% Video Views', millify(TW_25, precision=2))
+        col3.metric('50% Video Views', millify(TW_50, precision=2))
+        col4.metric('75% Video Views', millify(TW_75, precision=2))
+        col5.metric('100% Video Views', millify(TW_100, precision=2))
+        
+    SNAP_CONTAINER = st.container()
+
+    with SNAP_CONTAINER:
+        col1, col2, col3, col4, col5= st.columns(5)
+        col1.write("")
+        col1.image(SNAPCHAT_LOGO)
+        col2.metric('25% Video Views', millify(SNAP_25, precision=2))
+        col3.metric('50% Video Views', millify(SNAP_50, precision=2))
+        col4.metric('75% Video Views', millify(SNAP_75, precision=2))
+        col5.metric('100% Video Views', millify(SNAP_100, precision=2)) 
+        
+    TIK_CONTAINER = st.container()
+
+    with TIK_CONTAINER:
+        col1, col2, col3, col4, col5= st.columns(5)
+        col1.image(TIKTOK_LOGO)
+        col2.metric('25% Video Views', millify(TIK_25, precision=2))
+        col3.metric('50% Video Views', millify(TIK_50, precision=2))
+        col4.metric('75% Video Views', millify(TIK_75, precision=2))
+        col5.metric('100% Video Views', millify(TIK_100, precision=2)) 
+        
+    PINT_CONTAINER = st.container()
+
+    with PINT_CONTAINER:
+        col1, col2, col3, col4, col5= st.columns(5)
+        col1.image(PINTEREST_LOGO)
+        col2.metric('25% Video Views', millify(PINT_25, precision=2))
+        col3.metric('50% Video Views', millify(PINT_50, precision=2))
+        col4.metric('75% Video Views', millify(PINT_75, precision=2))
+        col5.metric('100% Video Views', millify(PINT_100, precision=2)) 
     
     resultsDict = {
             'platform': PLATFORMS,
@@ -199,4 +395,8 @@ with body:
     }
     
     df = pd.DataFrame.from_dict(resultsDict)
-    st.write(df.head(9))
+    s = df.style.format({"25% Video Views": lambda x : '{:,}'.format(x),
+                        "50% Video Views": lambda x : '{:,}'.format(x),
+                        "75% Video Views": lambda x : '{:,}'.format(x),
+                        "100% Video Views": lambda x : '{:,}'.format(x)})
+    st.table(s)
